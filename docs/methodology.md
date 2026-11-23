@@ -39,3 +39,12 @@ native-JAX p50; the table reports the median of those three paired ratios.
 This measurement does not establish a cause for any latency difference, and
 the fix for the earlier teardown crash is not being attributed to a PJRT API
 version change.
+
+The TPU run used comparison source commit
+`0dae440e584be34a0ca72dc405dc3a69a6fc652b` in the private source
+repository. This public repository was created from an allowlisted export
+without carrying over that repository's history. Its executable comparison
+and binding modules match the tested source; the exported doctor default
+selects the tested 0.3.0 wheel, and the optional process-exit workaround has
+documentation-only wording changes. A test of the published Git revision on
+TPU has not been performed.

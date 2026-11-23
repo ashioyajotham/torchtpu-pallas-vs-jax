@@ -72,7 +72,12 @@ backward measurement. The result is tied to comparison source commit
 `c5bb931da44489f0697d97ff94bddaaffeee94d6`, and the exact public
 TorchTPU wheel SHA-256 recorded in the JSON. The published result contains
 allowlisted aggregate fields only; raw machine logs remain outside this
-repository.
+repository. This repository is a clean-history export, not the exact Git
+revision executed on the TPU: the comparison and kernel-binding code is
+unchanged, while the exported doctor default was updated from 0.2.0 to 0.3.0
+and the optional process-exit workaround's wording was generalized. The
+published Git revision has passed CPU tests and packaging checks but has not
+itself been rerun on TPU.
 
 ## Scope and attribution
 
