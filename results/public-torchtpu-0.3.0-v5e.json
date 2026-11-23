@@ -1,0 +1,744 @@
+{
+  "adversarial_passed": true,
+  "matrix_case_runs": 30,
+  "normal_exit_doctor_runs": 10,
+  "passed": true,
+  "rows": [
+    {
+      "case": "s256-causal",
+      "forward_backward_ratio": {
+        "max": 2.895121212951225,
+        "median": 2.880407730996267,
+        "min": 2.869256346055575
+      },
+      "forward_ratio": {
+        "max": 1.7143361938447856,
+        "median": 1.639317008846834,
+        "min": 1.6073984142247784
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.34711500006778806,
+        "median": 0.34135499998910745,
+        "min": 0.33551500004591617
+      },
+      "native_forward_p50_ms": {
+        "max": 0.30270000002019515,
+        "median": 0.29443999994782644,
+        "min": 0.2872450000097615
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.0049400000298192,
+        "median": 0.9794349999765473,
+        "min": 0.9664199999974699
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.49243450001767997,
+        "median": 0.48655950001830206,
+        "min": 0.4826804999993328
+      }
+    },
+    {
+      "case": "s256-causal",
+      "forward_backward_ratio": {
+        "max": 2.1986945440706736,
+        "median": 2.183460034275768,
+        "min": 2.0932688011931186
+      },
+      "forward_ratio": {
+        "max": 1.5607060175290082,
+        "median": 1.5579404974342566,
+        "min": 1.436190947658468
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.34711500006778806,
+        "median": 0.34135499998910745,
+        "min": 0.33551500004591617
+      },
+      "native_forward_p50_ms": {
+        "max": 0.30270000002019515,
+        "median": 0.29443999994782644,
+        "min": 0.2872450000097615
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 0.7453349999764214,
+        "median": 0.7376950000548277,
+        "min": 0.726605000068048
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.4587199999832592,
+        "median": 0.4483050000203548,
+        "min": 0.43473499988522235
+      }
+    },
+    {
+      "case": "s256-noncausal",
+      "forward_backward_ratio": {
+        "max": 3.07303541567677,
+        "median": 2.8828452492445003,
+        "min": 2.8379036557722874
+      },
+      "forward_ratio": {
+        "max": 1.765330366537036,
+        "median": 1.6382096078111446,
+        "min": 1.6347152898655921
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.34698499996466126,
+        "median": 0.3435200000012628,
+        "min": 0.3289500000107637
+      },
+      "native_forward_p50_ms": {
+        "max": 0.3013195000107771,
+        "median": 0.2998044999458216,
+        "min": 0.2817855000074587
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.0108750000199507,
+        "median": 0.9903150000241112,
+        "min": 0.9847099998978592
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.497444500012989,
+        "median": 0.4936244999385053,
+        "min": 0.4900950000319426
+      }
+    },
+    {
+      "case": "s256-noncausal",
+      "forward_backward_ratio": {
+        "max": 2.2691898463457494,
+        "median": 2.198037960009301,
+        "min": 2.136430969775278
+      },
+      "forward_ratio": {
+        "max": 1.6443021376938058,
+        "median": 1.5138031617488348,
+        "min": 1.506590181054707
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.34698499996466126,
+        "median": 0.3435200000012628,
+        "min": 0.3289500000107637
+      },
+      "native_forward_p50_ms": {
+        "max": 0.3013195000107771,
+        "median": 0.2998044999458216,
+        "min": 0.2817855000074587
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 0.7550700000251709,
+        "median": 0.7464499999798591,
+        "min": 0.741309499971976
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.46334050003338234,
+        "median": 0.4539650000765505,
+        "min": 0.4538449999245131
+      }
+    },
+    {
+      "case": "s512-causal",
+      "forward_backward_ratio": {
+        "max": 2.26935224352902,
+        "median": 2.25879904380261,
+        "min": 2.1807628525032374
+      },
+      "forward_ratio": {
+        "max": 1.5858285391563034,
+        "median": 1.5713185113145065,
+        "min": 1.51633162301329
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.49144499996600643,
+        "median": 0.4852800000207935,
+        "min": 0.47952450000821045
+      },
+      "native_forward_p50_ms": {
+        "max": 0.36065000006146875,
+        "median": 0.3563500000609565,
+        "min": 0.3524050000009993
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.0961500000234992,
+        "median": 1.088209999920764,
+        "min": 1.0717249999743217
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.5651100000250153,
+        "median": 0.5537404999813589,
+        "min": 0.54686499993295
+      }
+    },
+    {
+      "case": "s512-causal",
+      "forward_backward_ratio": {
+        "max": 1.7494299040116852,
+        "median": 1.708262240151318,
+        "min": 1.70358839758648
+      },
+      "forward_ratio": {
+        "max": 1.4796186209057567,
+        "median": 1.447927352912213,
+        "min": 1.4047425283141535
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.49144499996600643,
+        "median": 0.4852800000207935,
+        "min": 0.47952450000821045
+      },
+      "native_forward_p50_ms": {
+        "max": 0.36065000006146875,
+        "median": 0.3563500000609565,
+        "min": 0.3524050000009993
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 0.8388945000206149,
+        "median": 0.8372199999939767,
+        "min": 0.8289854999361523
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.5221949999167919,
+        "median": 0.5214250001017717,
+        "min": 0.5005800000503768
+      }
+    },
+    {
+      "case": "s512-noncausal",
+      "forward_backward_ratio": {
+        "max": 2.3418033563968237,
+        "median": 2.230246909003471,
+        "min": 2.114918407498649
+      },
+      "forward_ratio": {
+        "max": 1.6036454762404564,
+        "median": 1.5810550310984746,
+        "min": 1.5294371579798993
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.478905000022678,
+        "median": 0.47796950002521044,
+        "min": 0.4746150000016769
+      },
+      "native_forward_p50_ms": {
+        "max": 0.357154999960585,
+        "median": 0.35534500000267144,
+        "min": 0.3544244999602597
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.1114550000002055,
+        "median": 1.06599000002916,
+        "min": 1.0128449999911027
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.5727500000034524,
+        "median": 0.5618200000299112,
+        "min": 0.5420699999376666
+      }
+    },
+    {
+      "case": "s512-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.7224937991670222,
+        "median": 1.7176266688043145,
+        "min": 1.7112607059902956
+      },
+      "forward_ratio": {
+        "max": 1.4400624744917867,
+        "median": 1.43705114037263,
+        "min": 1.4322937609572048
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.478905000022678,
+        "median": 0.47796950002521044,
+        "min": 0.4746150000016769
+      },
+      "native_forward_p50_ms": {
+        "max": 0.357154999960585,
+        "median": 0.35534500000267144,
+        "min": 0.3544244999602597
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 0.8232994999843868,
+        "median": 0.8225799998626826,
+        "min": 0.8121899999764537
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.5132499999831452,
+        "median": 0.511719000002131,
+        "min": 0.5076400000234571
+      }
+    },
+    {
+      "case": "s1024-causal",
+      "forward_backward_ratio": {
+        "max": 1.3690207699724315,
+        "median": 1.364127209876115,
+        "min": 1.3442839140444545
+      },
+      "forward_ratio": {
+        "max": 1.3495884295811647,
+        "median": 1.3333793450207443,
+        "min": 1.3193438211051816
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 1.0236900000109017,
+        "median": 1.0207000000264088,
+        "min": 1.0195749999866166
+      },
+      "native_forward_p50_ms": {
+        "max": 0.5800950000320881,
+        "median": 0.5797200000188241,
+        "min": 0.5795649999527086
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.3973594999470151,
+        "median": 1.3908299999911833,
+        "min": 1.3761299999828225
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.7828895001011915,
+        "median": 0.7727800000338902,
+        "min": 0.7648499999959313
+      }
+    },
+    {
+      "case": "s1024-causal",
+      "forward_backward_ratio": {
+        "max": 1.2341460902695984,
+        "median": 1.2277593802128686,
+        "min": 1.2245174878328697
+      },
+      "forward_ratio": {
+        "max": 1.2873879546298224,
+        "median": 1.271053267076901,
+        "min": 1.269964402221845
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 1.0236900000109017,
+        "median": 1.0207000000264088,
+        "min": 1.0195749999866166
+      },
+      "native_forward_p50_ms": {
+        "max": 0.5800950000320881,
+        "median": 0.5797200000188241,
+        "min": 0.5795649999527086
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.2583044999701087,
+        "median": 1.256844999943496,
+        "min": 1.2498649998633482
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.7461249998641506,
+        "median": 0.7368550000137475,
+        "min": 0.736699999947632
+      }
+    },
+    {
+      "case": "s1024-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.4228480068877516,
+        "median": 1.3908611151862948,
+        "min": 1.3786035473814395
+      },
+      "forward_ratio": {
+        "max": 1.3673313597522962,
+        "median": 1.3640748183412006,
+        "min": 1.351629843464778
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.9853500000644999,
+        "median": 0.9823044999848207,
+        "min": 0.9818450000125267
+      },
+      "native_forward_p50_ms": {
+        "max": 0.5788900000425201,
+        "median": 0.5779594999921756,
+        "min": 0.5744254999910936
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.3976699999602715,
+        "median": 1.370484999938526,
+        "min": 1.353574999995999
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.788379999960398,
+        "median": 0.7854299999792147,
+        "min": 0.7824450001407968
+      }
+    },
+    {
+      "case": "s1024-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.248487612628382,
+        "median": 1.2415253935066615,
+        "min": 1.2403399806525965
+      },
+      "forward_ratio": {
+        "max": 1.2852275980899095,
+        "median": 1.2796263397330965,
+        "min": 1.2618364456325215
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 0.9853500000644999,
+        "median": 0.9823044999848207,
+        "min": 0.9818450000125267
+      },
+      "native_forward_p50_ms": {
+        "max": 0.5788900000425201,
+        "median": 0.5779594999921756,
+        "min": 0.5744254999910936
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 1.2263950000601653,
+        "median": 1.222169000016038,
+        "min": 1.2189855000031002
+      },
+      "runner_forward_p50_ms": {
+        "max": 0.7428094999681889,
+        "median": 0.735050000002957,
+        "min": 0.7304645000658638
+      }
+    },
+    {
+      "case": "s2048-causal",
+      "forward_backward_ratio": {
+        "max": 1.117176602660332,
+        "median": 1.116714524864941,
+        "min": 1.116507723437038
+      },
+      "forward_ratio": {
+        "max": 1.1375900228603553,
+        "median": 1.1311918085387616,
+        "min": 1.1308064492998322
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 3.1725699999469725,
+        "median": 3.1623250000052394,
+        "min": 3.158885000061673
+      },
+      "native_forward_p50_ms": {
+        "max": 1.4697650000243812,
+        "median": 1.459085000021787,
+        "min": 1.4567745000704235
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 3.5428550000915493,
+        "median": 3.532875500013688,
+        "min": 3.5269195000182663
+      },
+      "runner_forward_p50_ms": {
+        "max": 1.671989999977086,
+        "median": 1.650504999986424,
+        "min": 1.6473299998551738
+      }
+    },
+    {
+      "case": "s2048-causal",
+      "forward_backward_ratio": {
+        "max": 1.0991833540404372,
+        "median": 1.0951358047840611,
+        "min": 1.0866191709767596
+      },
+      "forward_ratio": {
+        "max": 1.110349636892567,
+        "median": 1.0997370328569471,
+        "min": 1.0814165129103896
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 3.1725699999469725,
+        "median": 3.1623250000052394,
+        "min": 3.158885000061673
+      },
+      "native_forward_p50_ms": {
+        "max": 1.4697650000243812,
+        "median": 1.459085000021787,
+        "min": 1.4567745000704235
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 3.475975000071685,
+        "median": 3.4743950001256962,
+        "min": 3.4325049999779367
+      },
+      "runner_forward_p50_ms": {
+        "max": 1.620094499969582,
+        "median": 1.6163550001238036,
+        "min": 1.5753799999629337
+      }
+    },
+    {
+      "case": "s2048-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.1277881172401643,
+        "median": 1.125769087525477,
+        "min": 1.1250841837560766
+      },
+      "forward_ratio": {
+        "max": 1.1496500095603028,
+        "median": 1.146052540825924,
+        "min": 1.1346470582817114
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 3.010954499984564,
+        "median": 3.006815000048846,
+        "min": 3.0052089999799136
+      },
+      "native_forward_p50_ms": {
+        "max": 1.4600399999835645,
+        "median": 1.4541349999035447,
+        "min": 1.4499199999988832
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 3.389639500028352,
+        "median": 3.3892390000005435,
+        "min": 3.382920000035483
+      },
+      "runner_forward_p50_ms": {
+        "max": 1.6785349999395294,
+        "median": 1.6616844999930436,
+        "min": 1.6499299999850336
+      }
+    },
+    {
+      "case": "s2048-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.1120551147624769,
+        "median": 1.1091571335071981,
+        "min": 1.1023894582151932
+      },
+      "forward_ratio": {
+        "max": 1.1191670649364243,
+        "median": 1.1176306279044326,
+        "min": 1.1044180297100568
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 3.010954499984564,
+        "median": 3.006815000048846,
+        "min": 3.0052089999799136
+      },
+      "native_forward_p50_ms": {
+        "max": 1.4600399999835645,
+        "median": 1.4541349999035447,
+        "min": 1.4499199999988832
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 3.343743999948856,
+        "median": 3.333249000007754,
+        "min": 3.3192444999485815
+      },
+      "runner_forward_p50_ms": {
+        "max": 1.6274199998633776,
+        "median": 1.6204750000099466,
+        "min": 1.6124945000797197
+      }
+    },
+    {
+      "case": "s4096-causal",
+      "forward_backward_ratio": {
+        "max": 1.0618805846413215,
+        "median": 1.0588914652148813,
+        "min": 1.0564252195673265
+      },
+      "forward_ratio": {
+        "max": 1.0470677772997252,
+        "median": 1.0454035507476227,
+        "min": 1.0388960810979129
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 11.661974999924496,
+        "median": 11.651569500031655,
+        "min": 11.646617499991407
+      },
+      "native_forward_p50_ms": {
+        "max": 4.9192745000254945,
+        "median": 4.911829499974374,
+        "min": 4.9062440000398055
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 12.367316999984723,
+        "median": 12.337747499941543,
+        "min": 12.320004499883908
+      },
+      "runner_forward_p50_ms": {
+        "max": 5.137170000011793,
+        "median": 5.134843999940131,
+        "min": 5.110614999921381
+      }
+    },
+    {
+      "case": "s4096-causal",
+      "forward_backward_ratio": {
+        "max": 1.0531331521778131,
+        "median": 1.0507981778777546,
+        "min": 1.050514514058259
+      },
+      "forward_ratio": {
+        "max": 1.0385530152724496,
+        "median": 1.03662484620682,
+        "min": 1.0354747432935587
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 11.661974999924496,
+        "median": 11.651569500031655,
+        "min": 11.646617499991407
+      },
+      "native_forward_p50_ms": {
+        "max": 4.9192745000254945,
+        "median": 4.911829499974374,
+        "min": 4.9062440000398055
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 12.265438999975231,
+        "median": 12.251074000005246,
+        "min": 12.243448000049284
+      },
+      "runner_forward_p50_ms": {
+        "max": 5.095394499903705,
+        "median": 5.093784500104448,
+        "min": 5.091724500005057
+      }
+    },
+    {
+      "case": "s4096-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.0637949226196743,
+        "median": 1.060145459032524,
+        "min": 1.0581513337175859
+      },
+      "forward_ratio": {
+        "max": 1.0449441802669168,
+        "median": 1.0421075300266522,
+        "min": 1.0404105496765363
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 11.101809000024332,
+        "median": 11.07273950000831,
+        "min": 11.062244000015653
+      },
+      "native_forward_p50_ms": {
+        "max": 4.930024499913088,
+        "median": 4.92216000000667,
+        "min": 4.914974500024982
+      },
+      "runner": "torchtpu_direct",
+      "runner_forward_backward_p50_ms": {
+        "max": 11.767958999996608,
+        "median": 11.747394000053646,
+        "min": 11.738714499983871
+      },
+      "runner_forward_p50_ms": {
+        "max": 5.1358739999614045,
+        "median": 5.129420000002938,
+        "min": 5.129249499873367
+      }
+    },
+    {
+      "case": "s4096-noncausal",
+      "forward_backward_ratio": {
+        "max": 1.056406592061827,
+        "median": 1.0521996260462414,
+        "min": 1.0508799511813283
+      },
+      "forward_ratio": {
+        "max": 1.0354326149428301,
+        "median": 1.0320738771150637,
+        "min": 1.0313170495544282
+      },
+      "max_abs_error": 0.0,
+      "native_forward_backward_p50_ms": {
+        "max": 11.101809000024332,
+        "median": 11.07273950000831,
+        "min": 11.062244000015653
+      },
+      "native_forward_p50_ms": {
+        "max": 4.930024499913088,
+        "median": 4.92216000000667,
+        "min": 4.914974500024982
+      },
+      "runner": "torchtpu_torch_compile",
+      "runner_forward_backward_p50_ms": {
+        "max": 11.697314999992159,
+        "median": 11.666668499970001,
+        "min": 11.639689000048747
+      },
+      "runner_forward_p50_ms": {
+        "max": 5.096564999973907,
+        "median": 5.088149499897554,
+        "min": 5.068897000001016
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scope": {
+    "batch": 1,
+    "device": "TPU v5e",
+    "devices_used": 1,
+    "head_dim": 128,
+    "heads": 1,
+    "masks": [
+      "causal",
+      "noncausal"
+    ],
+    "repetitions": 3,
+    "sequence_lengths": [
+      256,
+      512,
+      1024,
+      2048,
+      4096
+    ],
+    "timing": "synchronized host-observed latency",
+    "trials": 30,
+    "warmups": 5
+  },
+  "software": {
+    "jax": "0.9.2",
+    "jaxlib": "0.9.2",
+    "libtpu": "0.0.51",
+    "numpy": "2.5.5",
+    "torch": "2.15.0+cpu",
+    "torch_tpu": "0.3.0"
+  },
+  "source_control": {
+    "comparison_commit": "0dae440e584be34a0ca72dc405dc3a69a6fc652b",
+    "upstream_commit": "c5bb931da44489f0697d97ff94bddaaffeee94d6"
+  },
+  "torch_tpu_wheel_sha256": "cec959a8a3cb0d47290534d9a1f763e59ae3bd92c441756480fea3f0e24ff9c0"
+}

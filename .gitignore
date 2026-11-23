@@ -1,0 +1,10 @@
+.venv/
+.venv-tpu/
+artifacts/
+__pycache__/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+*.pyc
+.DS_Store

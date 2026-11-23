@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torch-tpu-vs-jax-pallas"
+version = "0.2.0"
+description = "One Pallas kernel through native JAX and TorchTPU frontends"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=2"]
+
+[project.optional-dependencies]
+test = ["pytest>=9"]
+tpu = ["jax==0.9.2", "jaxlib==0.9.2"]
+
+[project.scripts]
+tpu-compare = "torch_tpu_vs_jax_pallas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

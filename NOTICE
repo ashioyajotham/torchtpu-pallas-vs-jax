@@ -1,0 +1,5 @@
+Copyright 2026 Victor Ashioya
+
+The comparison harness is licensed under Apache-2.0. The separately
+maintained recompute_dont_restore kernel is installed as a pinned dependency;
+its source is not included here and retains its own license and notices.
