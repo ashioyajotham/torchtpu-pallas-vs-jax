@@ -44,9 +44,15 @@ Raw results are written under ignored `artifacts/`. See
 [`docs/methodology.md`](docs/methodology.md) for measurement and interpretation
 details.
 
-## Verified public-wheel result (November 2026)
+## Verified exact-commit result (November 23, 2026)
 
-The [TorchTPU 0.3.0 v5e result](results/public-torchtpu-0.3.0-v5e.json)
+The [TorchTPU 0.3.0 v5e rerun](results/public-commit-1fc758-v5e.json)
+executed public comparison commit
+[`1fc7583`](https://github.com/ashioyajotham/torchtpu-pallas-vs-jax/tree/1fc7583448ed01e51bd725729d54d36713ac25a9)
+and upstream kernel commit `c5bb931da44489f0697d97ff94bddaaffeee94d6`.
+It used the public TorchTPU wheel with SHA-256
+`cec959a8a3cb0d47290534d9a1f763e59ae3bd92c441756480fea3f0e24ff9c0`.
+The run
 passed ten separate doctor runs with normal Python interpreter exit, a smoke
 case, an adversarial case, and the complete 10-shape/mask matrix with three
 fresh-process repetitions (30 case runs). All recorded output and Q/K/V
@@ -59,25 +65,24 @@ For noncausal attention, the median of three paired TorchTPU/native-JAX
 
 | Sequence | Direct forward | Compiled forward | Direct forward+backward | Compiled forward+backward |
 | ---: | ---: | ---: | ---: | ---: |
-| 256 | 1.64× | 1.51× | 2.88× | 2.20× |
-| 1024 | 1.36× | 1.28× | 1.39× | 1.24× |
-| 4096 | 1.04× | 1.03× | 1.06× | 1.05× |
+| 256 | 1.88× | 1.72× | 3.14× | 2.43× |
+| 1024 | 1.42× | 1.34× | 1.40× | 1.28× |
+| 4096 | 1.05× | 1.04× | 1.07× | 1.06× |
 
 The JSON contains the causal rows, S=512/2048, absolute timings, and
 repetition ranges. These ratios reflect the full synchronized Python call;
 they do not isolate the TPU kernel or explain the source of the remaining
 overhead. Forward-plus-backward is a separately timed path, not an isolated
-backward measurement. The result is tied to comparison source commit
-`0dae440e584be34a0ca72dc405dc3a69a6fc652b`, upstream commit
-`c5bb931da44489f0697d97ff94bddaaffeee94d6`, and the exact public
-TorchTPU wheel SHA-256 recorded in the JSON. The published result contains
-allowlisted aggregate fields only; raw machine logs remain outside this
-repository. This repository is a clean-history export, not the exact Git
-revision executed on the TPU: the comparison and kernel-binding code is
-unchanged, while the exported doctor default was updated from 0.2.0 to 0.3.0
-and the optional process-exit workaround's wording was generalized. The
-published Git revision has passed CPU tests and packaging checks but has not
-itself been rerun on TPU.
+backward measurement. The published JSON contains allowlisted aggregate fields
+only; raw machine logs remain outside this repository.
+
+The [earlier 0.3.0 result](results/public-torchtpu-0.3.0-v5e.json) remains
+available separately. It was measured from private comparison source commit
+`0dae440e584be34a0ca72dc405dc3a69a6fc652b` before the clean-history
+export. Its small-shape host-latency ratios differ from this rerun; these two
+measurements do not establish a cause for that variation. Do not combine their
+rows as one controlled experiment. This README update is newer than the tested
+public commit; the rerun result itself names the exact revision it executed.
 
 ## Scope and attribution
 

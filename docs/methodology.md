@@ -29,22 +29,31 @@ raw logs, environment paths, package freezes, or storage URIs into the public
 result. The public summary is derived evidence; the source reports remain
 private and can be provided to maintainers on request.
 
-The November 2026 result was produced with the public TorchTPU 0.3.0 wheel,
-PyTorch 2.15.0+cpu, libtpu 0.0.51, and JAX/JAXlib 0.9.2. The ten-run doctor
+Both November 2026 runs used the public TorchTPU 0.3.0 wheel,
+PyTorch 2.15.0+cpu, libtpu 0.0.51, and JAX/JAXlib 0.9.2. Each ten-run doctor
 check used separate Python processes with normal interpreter teardown; all
-ten returned zero and wrote passing reports. The full sweep then exited zero
-after all 30 shape/mask/repetition case runs and the adversarial gate. The
-ratio for each repetition is that repetition's TorchTPU p50 divided by its
-native-JAX p50; the table reports the median of those three paired ratios.
-This measurement does not establish a cause for any latency difference, and
+ten returned zero and wrote passing reports in each run. Both full sweeps
+exited zero after all 30 shape/mask/repetition case runs and the adversarial
+gate. The ratio for each repetition is that repetition's TorchTPU p50 divided
+by its native-JAX p50; the table reports the median of those three paired
+ratios.
+These measurements do not establish a cause for any latency difference, and
 the fix for the earlier teardown crash is not being attributed to a PJRT API
 version change.
 
-The TPU run used comparison source commit
+The earlier TPU run used comparison source commit
 `0dae440e584be34a0ca72dc405dc3a69a6fc652b` in the private source
 repository. This public repository was created from an allowlisted export
 without carrying over that repository's history. Its executable comparison
 and binding modules match the tested source; the exported doctor default
 selects the tested 0.3.0 wheel, and the optional process-exit workaround has
-documentation-only wording changes. A test of the published Git revision on
-TPU has not been performed.
+documentation-only wording changes.
+
+The subsequent rerun checked out the published public commit
+`1fc7583448ed01e51bd725729d54d36713ac25a9` on TPU and repeated the
+normal-exit doctor, smoke, complete matrix, and adversarial gates. Its final
+process returned zero, and the temporary TPU and queued reservation were
+deleted after private evidence upload. The two result files preserve their
+distinct source revisions. Differences between their host-latency ratios,
+especially at small shapes, should not be assigned to a specific cause from
+these measurements alone.
